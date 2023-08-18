@@ -17,7 +17,7 @@ public class JwtController {
     private JwtService jwtService;
 
     @PostMapping({"/authenticate"})
-    public JwtResponse createJwtToken(@RequestBody JwtRequest jwtRequest) throws Exception{
+    public JwtResponse createJwtToken(@RequestBody JwtRequest jwtRequest) throws Exception {
         return jwtService.createJwtToken(jwtRequest);
     }
 }

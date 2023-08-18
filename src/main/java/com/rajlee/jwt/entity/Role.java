@@ -1,8 +1,5 @@
 package com.rajlee.jwt.entity;
 
-
-import org.springframework.context.annotation.Primary;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

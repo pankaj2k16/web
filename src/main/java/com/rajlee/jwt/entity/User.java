@@ -8,18 +8,19 @@ public class User {
 
     @Id
     private String userName;
-    private String firstName;
-    private String lastName;
-    private String password;
+    private String userFirstName;
+    private String userLastName;
+    private String userPassword;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "USER_ROLE",
-    joinColumns = {
-            @JoinColumn(name = "USER_ID")
-    },
-    inverseJoinColumns = {
-            @JoinColumn(name = "ROLE_ID")
-    })
-    private Set<Role> roleSet;
+            joinColumns = {
+                    @JoinColumn(name = "USER_ID")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "ROLE_ID")
+            }
+    )
+    private Set<Role> role;
 
     public String getUserName() {
         return userName;
@@ -29,35 +30,35 @@ public class User {
         this.userName = userName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getUserFirstName() {
+        return userFirstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setUserFirstName(String userFirstName) {
+        this.userFirstName = userFirstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUserLastName() {
+        return userLastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUserLastName(String userLastName) {
+        this.userLastName = userLastName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
-    public Set<Role> getRoleSet() {
-        return roleSet;
+    public Set<Role> getRole() {
+        return role;
     }
 
-    public void setRoleSet(Set<Role> roleSet) {
-        this.roleSet = roleSet;
+    public void setRole(Set<Role> role) {
+        this.role = role;
     }
 }

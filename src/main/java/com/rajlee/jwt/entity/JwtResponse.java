@@ -1,6 +1,7 @@
 package com.rajlee.jwt.entity;
 
 public class JwtResponse {
+
     private User user;
     private String jwtToken;
 
